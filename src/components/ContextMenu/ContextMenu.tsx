@@ -28,14 +28,14 @@ function ContextMenu({
   className,
   style,
 }: RootProps) {
-  let classes = [ContextMenuStyles['sbui-contextmenu__content']]
+  let classes = [ContextMenuStyles['paf-contextmenu__content']]
   if (className) {
     classes.push(className)
   }
   return (
     <RadixContextMenu.Root onOpenChange={onOpenChange}>
       <RadixContextMenu.Trigger
-        className={ContextMenuStyles['sbui-contextmenu__trigger']}
+        className={ContextMenuStyles['paf-contextmenu__trigger']}
       >
         {children}
       </RadixContextMenu.Trigger>
@@ -61,7 +61,7 @@ interface ItemProps {
 export function Item({ children, icon, disabled, onClick }: ItemProps) {
   return (
     <RadixContextMenu.Item
-      className={ContextMenuStyles['sbui-contextmenu-item']}
+      className={ContextMenuStyles['paf-contextmenu-item']}
       disabled={disabled}
       onSelect={onClick}
     >
@@ -73,7 +73,7 @@ export function Item({ children, icon, disabled, onClick }: ItemProps) {
 
 export function Misc({ children, icon }: ItemProps) {
   return (
-    <div className={ContextMenuStyles['sbui-contextmenu-misc']}>
+    <div className={ContextMenuStyles['paf-contextmenu-misc']}>
       {icon && icon}
       {children}
     </div>
@@ -106,11 +106,11 @@ export function Checkbox({
     <RadixContextMenu.CheckboxItem
       checked={checked}
       onCheckedChange={handleChange}
-      className={`${ContextMenuStyles['sbui-contextmenu-item']} ${ContextMenuStyles['sbui-contextmenu-input']}`}
+      className={`${ContextMenuStyles['paf-contextmenu-item']} ${ContextMenuStyles['paf-contextmenu-input']}`}
       disabled={disabled}
     >
       <RadixContextMenu.ItemIndicator
-        className={ContextMenuStyles['sbui-contextmenu-input__check']}
+        className={ContextMenuStyles['paf-contextmenu-input__check']}
       >
         {ItemIndicator ? ItemIndicator : <IconCheck size="tiny" />}
         <RadixContextMenu.CheckboxItem />
@@ -130,10 +130,10 @@ export function Radio({ children, value, ItemIndicator }: RadioProps) {
   return (
     <RadixContextMenu.RadioItem
       value={value}
-      className={`${ContextMenuStyles['sbui-contextmenu-item']} ${ContextMenuStyles['sbui-contextmenu-input']}`}
+      className={`${ContextMenuStyles['paf-contextmenu-item']} ${ContextMenuStyles['paf-contextmenu-input']}`}
     >
       <RadixContextMenu.ItemIndicator
-        className={ContextMenuStyles['sbui-contextmenu-input__check']}
+        className={ContextMenuStyles['paf-contextmenu-input__check']}
       >
         {ItemIndicator ? ItemIndicator : <IconCheck size="tiny" />}
       </RadixContextMenu.ItemIndicator>
@@ -174,7 +174,7 @@ interface LabelProps {
 export function Label({ children }: LabelProps) {
   return (
     <RadixContextMenu.Label
-      className={ContextMenuStyles['sbui-contextmenu-label']}
+      className={ContextMenuStyles['paf-contextmenu-label']}
     >
       {children}
     </RadixContextMenu.Label>

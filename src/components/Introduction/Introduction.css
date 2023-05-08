@@ -1,4 +1,4 @@
-@tailwind 'tailwindcss/base';
+/* @tailwind 'tailwindcss/base'; */
 /* Start purging... */
 @tailwind components;
 @tailwind utilities;

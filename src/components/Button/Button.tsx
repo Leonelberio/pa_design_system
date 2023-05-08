@@ -87,42 +87,42 @@ const Button = forwardRef<RefHandle, ButtonProps>(
     // styles
     const showIcon = loading || icon
 
-    let classes = [ButtonStyles['sbui-btn']]
-    let containerClasses = [ButtonStyles['sbui-btn-container']]
+    let classes = [ButtonStyles['paf-btn']]
+    let containerClasses = [ButtonStyles['paf-btn-container']]
 
-    classes.push(ButtonStyles[`sbui-btn-${type}`])
+    classes.push(ButtonStyles[`paf-btn-${type}`])
 
     if (block) {
-      containerClasses.push(ButtonStyles['sbui-btn--w-full'])
-      classes.push(ButtonStyles['sbui-btn--w-full'])
+      containerClasses.push(ButtonStyles['paf-btn--w-full'])
+      classes.push(ButtonStyles['paf-btn--w-full'])
     }
 
     if (danger) {
-      classes.push(ButtonStyles['sbui-btn--danger'])
+      classes.push(ButtonStyles['paf-btn--danger'])
     }
 
     if (shadow && type !== 'link' && type !== 'text') {
-      classes.push(ButtonStyles['sbui-btn-container--shadow'])
+      classes.push(ButtonStyles['paf-btn-container--shadow'])
     }
 
     if (size) {
-      classes.push(ButtonStyles[`sbui-btn--${size}`])
+      classes.push(ButtonStyles[`paf-btn--${size}`])
     }
 
     if (className) {
       classes.push(className)
     }
 
-    const iconLoaderClasses = [ButtonStyles['sbui-btn--anim--spin']]
+    const iconLoaderClasses = [ButtonStyles['paf-btn--anim--spin']]
 
     if (loadingCentered) {
-      iconLoaderClasses.push(ButtonStyles[`sbui-btn-loader--center`])
+      iconLoaderClasses.push(ButtonStyles[`paf-btn-loader--center`])
     }
     if (loading && loadingCentered) {
-      classes.push(ButtonStyles[`sbui-btn--text-fade-out`])
+      classes.push(ButtonStyles[`paf-btn--text-fade-out`])
     }
 
-    classes.push(ButtonStyles[`sbui-btn--text-align-${textAlign}`])
+    classes.push(ButtonStyles[`paf-btn--text-align-${textAlign}`])
 
     // custom button tag
     const CustomButton: React.FC<CustomButtonProps> = ({ ...props }) => {

@@ -60,7 +60,7 @@ describe('#Button', () => {
   it('should have "w-full" class', async () => {
     render(<Button block>Button Block</Button>)
     expect(screen.queryByRole('button')).toHaveClass(
-      'sbui-btn sbui-btn-primary sbui-btn--w-full sbui-btn-container--shadow sbui-btn--tiny'
+      'paf-btn paf-btn-primary paf-btn--w-full paf-btn-container--shadow paf-btn--tiny'
     )
   })
 
@@ -69,11 +69,11 @@ describe('#Button', () => {
 
     if (type !== 'text' && type !== 'link') {
       expect(screen.queryByRole('button')).toHaveClass(
-        `sbui-btn sbui-btn-${type} sbui-btn-container--shadow sbui-btn--tiny`
+        `paf-btn paf-btn-${type} paf-btn-container--shadow paf-btn--tiny`
       )
     } else {
       expect(screen.queryByRole('button')).toHaveClass(
-        `sbui-btn sbui-btn-${type} sbui-btn--tiny`
+        `paf-btn paf-btn-${type} paf-btn--tiny`
       )
     }
   })
@@ -81,7 +81,7 @@ describe('#Button', () => {
   it.each(SIZES)('should have "btn--%s" class', (size) => {
     render(<Button size={size}>Button</Button>)
     expect(screen.queryByRole('button')).toHaveClass(
-      `sbui-btn sbui-btn-primary sbui-btn-container--shadow sbui-btn--${size}`
+      `paf-btn paf-btn-primary paf-btn-container--shadow paf-btn--${size}`
     )
   })
 })

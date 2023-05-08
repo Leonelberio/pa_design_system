@@ -36,13 +36,13 @@ const Alert = ({
   children,
 }: Props) => {
   const [visible, setVisible] = useState(true)
-  let containerClasses = [AlertStyles['sbui-alert-container']]
-  containerClasses.push(AlertStyles[`sbui-alert-container--${variant}`])
+  let containerClasses = [AlertStyles['paf-alert-container']]
+  containerClasses.push(AlertStyles[`paf-alert-container--${variant}`])
   if (className) containerClasses.push(className)
-  let descriptionClasses = [AlertStyles['sbui-alert-description']]
-  descriptionClasses.push(AlertStyles[`sbui-alert-description--${variant}`])
-  let closeButtonClasses = [AlertStyles['sbui-close-button']]
-  closeButtonClasses.push(AlertStyles[`sbui-close-button--${variant}`])
+  let descriptionClasses = [AlertStyles['paf-alert-description']]
+  descriptionClasses.push(AlertStyles[`paf-alert-description--${variant}`])
+  let closeButtonClasses = [AlertStyles['paf-close-button']]
+  closeButtonClasses.push(AlertStyles[`paf-close-button--${variant}`])
 
   return (
     <>
@@ -51,7 +51,7 @@ const Alert = ({
           <div className="flex">
             <div className="flex-shrink-0">{withIcon && icons[variant]}</div>
             <div className="ml-3">
-              <h3 className="sbui-alert-title">{title}</h3>
+              <h3 className="paf-alert-title">{title}</h3>
               <div className={descriptionClasses.join(' ')}>{children}</div>
             </div>
             {closable && (

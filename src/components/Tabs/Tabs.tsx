@@ -74,12 +74,12 @@ function Tabs({
   return (
     <Space direction="vertical" size={4}>
       <div id={id} role="tablist" aria-label={id} style={tabBarStyle}>
-        <Space className={TabsStyles['sbui-tab-bar-container']} size={0}>
+        <Space className={TabsStyles['paf-tab-bar-container']} size={0}>
           <Space
             size={tabBarGutter ? tabBarGutter : underlined ? 6 : 3}
             className={
-              TabsStyles['sbui-tab-bar-inner-container'] +
-              (scrollable ? ` ${TabsStyles['sbui-tab-bar--scrollable']}` : '')
+              TabsStyles['paf-tab-bar-inner-container'] +
+              (scrollable ? ` ${TabsStyles['paf-tab-bar--scrollable']}` : '')
             }
           >
             {addOnBefore}
@@ -93,9 +93,9 @@ function Tabs({
                   shadow={!block}
                   className={
                     underlined && activeMatch
-                      ? `${TabsStyles['sbui-tab-button-underline']} ${TabsStyles['sbui-tab-button-underline--active']}`
+                      ? `${TabsStyles['paf-tab-button-underline']} ${TabsStyles['paf-tab-button-underline--active']}`
                       : underlined
-                      ? TabsStyles['sbui-tab-button-underline']
+                      ? TabsStyles['paf-tab-button-underline']
                       : ''
                   }
                   type={activeMatch && !underlined ? 'primary' : 'text'}

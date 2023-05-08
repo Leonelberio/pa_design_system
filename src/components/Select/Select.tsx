@@ -70,11 +70,11 @@ function Select({
   borderless = false,
   ...props
 }: Props) {
-  let selectClasses = [SelectStyles['sbui-select']]
-  if (error) selectClasses.push(SelectStyles['sbui-select--error'])
-  if (icon) selectClasses.push(SelectStyles['sbui-select--with-icon'])
-  if (size) selectClasses.push(SelectStyles[`sbui-select--${size}`])
-  if (borderless) selectClasses.push(SelectStyles[`sbui-select--borderless`])
+  let selectClasses = [SelectStyles['paf-select']]
+  if (error) selectClasses.push(SelectStyles['paf-select--error'])
+  if (icon) selectClasses.push(SelectStyles['paf-select--with-icon'])
+  if (size) selectClasses.push(SelectStyles[`paf-select--${size}`])
+  if (borderless) selectClasses.push(SelectStyles[`paf-select--borderless`])
 
   return (
     <FormLayout
@@ -90,7 +90,7 @@ function Select({
       style={style}
       size={size}
     >
-      <div className={SelectStyles['sbui-select-container']}>
+      <div className={SelectStyles['paf-select-container']}>
         <select
           id={id}
           name={name}
@@ -111,13 +111,13 @@ function Select({
         </select>
         {icon && <InputIconContainer icon={icon} />}
         {error && (
-          <div className="sbui-select-actions-container">
+          <div className="paf-select-actions-container">
             {error && <InputErrorIcon size={size} />}
           </div>
         )}
-        <span className={SelectStyles['sbui-select-chevron-container']}>
+        <span className={SelectStyles['paf-select-chevron-container']}>
           <svg
-            className={SelectStyles['sbui-select-chevron']}
+            className={SelectStyles['paf-select-chevron']}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"

@@ -35,7 +35,7 @@ function Message({
   ...props
 }: ComponentProps<typeof Typography.Text>) {
   return (
-    <Typography.Text className={ToastStyles['sbui-toast-message']} {...props}>
+    <Typography.Text className={ToastStyles['paf-toast-message']} {...props}>
       {children}
     </Typography.Text>
   )
@@ -47,7 +47,7 @@ function Description({
 }: ComponentProps<typeof Typography.Text>) {
   return (
     <Typography.Text
-      className={ToastStyles['sbui-toast-description']}
+      className={ToastStyles['paf-toast-description']}
       {...props}
     >
       {children}
@@ -81,22 +81,22 @@ function Toast({
   width,
   ...rest
 }: ToastProps) {
-  let containerClasses = [ToastStyles['sbui-toast-container']]
+  let containerClasses = [ToastStyles['paf-toast-container']]
   if (type) {
-    containerClasses.push(ToastStyles[`sbui-toast-container--${type}`])
+    containerClasses.push(ToastStyles[`paf-toast-container--${type}`])
   }
   if (width === 'sm' || width === 'md') {
-    containerClasses.push(ToastStyles[`sbui-toast-container--${width}`])
+    containerClasses.push(ToastStyles[`paf-toast-container--${width}`])
   }
 
-  let closeButtonClasses = [ToastStyles['sbui-toast-close-button']]
+  let closeButtonClasses = [ToastStyles['paf-toast-close-button']]
   if (type) {
-    closeButtonClasses.push(ToastStyles[`sbui-toast-close-button--${type}`])
+    closeButtonClasses.push(ToastStyles[`paf-toast-close-button--${type}`])
   }
 
-  let detailsClasses = [ToastStyles['sbui-toast-details']]
+  let detailsClasses = [ToastStyles['paf-toast-details']]
   if (actionsPosition === 'bottom') {
-    detailsClasses.push(ToastStyles[`sbui-toast-details--actions-bottom`])
+    detailsClasses.push(ToastStyles[`paf-toast-details--actions-bottom`])
   }
 
   const _message =
@@ -113,30 +113,30 @@ function Toast({
       }`}
     >
       <div>
-        <Typography.Text className={ToastStyles['sbui-toast-icon-container']}>
+        <Typography.Text className={ToastStyles['paf-toast-icon-container']}>
           {type === 'loading' ? (
             <IconLoader
               size="medium"
               strokeWidth={2}
-              className={ToastStyles['sbui-alert--anim--spin']}
+              className={ToastStyles['paf-alert--anim--spin']}
             />
           ) : (
             icon || icons[type]
           )}
         </Typography.Text>
         <div className={detailsClasses.join(' ')}>
-          <div className={ToastStyles['sbui-toast-details__content']}>
+          <div className={ToastStyles['paf-toast-details__content']}>
             {_message}
             {description && <Description>{description}</Description>}
           </div>
           {actions && (
-            <div className={ToastStyles['sbui-toast-details__actions']}>
+            <div className={ToastStyles['paf-toast-details__actions']}>
               {actions}
             </div>
           )}
         </div>
         {closable && (
-          <div className={ToastStyles['sbui-toast-close-container']}>
+          <div className={ToastStyles['paf-toast-close-container']}>
             <button
               aria-label="Close alert"
               className={closeButtonClasses.join(' ')}

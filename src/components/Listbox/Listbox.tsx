@@ -98,11 +98,11 @@ function Listbox({
     setSelected(e)
   }
 
-  let selectClasses = [SelectStyles['sbui-listbox']]
-  if (error) selectClasses.push(SelectStyles['sbui-listbox--error'])
-  if (icon) selectClasses.push(SelectStyles['sbui-listbox--with-icon'])
-  if (size) selectClasses.push(SelectStyles[`sbui-listbox--${size}`])
-  if (borderless) selectClasses.push(SelectStyles['sbui-listbox--borderless'])
+  let selectClasses = [SelectStyles['paf-listbox']]
+  if (error) selectClasses.push(SelectStyles['paf-listbox--error'])
+  if (icon) selectClasses.push(SelectStyles['paf-listbox--with-icon'])
+  if (size) selectClasses.push(SelectStyles[`paf-listbox--${size}`])
+  if (borderless) selectClasses.push(SelectStyles['paf-listbox--borderless'])
 
   return (
     <FormLayout
@@ -116,24 +116,24 @@ function Listbox({
       style={style}
       size={size}
     >
-      <div className={SelectStyles['sbui-listbox-container']}>
+      <div className={SelectStyles['paf-listbox-container']}>
         <HeadlessListbox value={selected} onChange={handleOnChange}>
           {({ open }) => {
             return (
               <div className="relative">
                 <HeadlessListbox.Button className={selectClasses.join(' ')}>
                   {icon && <InputIconContainer icon={icon} />}
-                  <span className={SelectStyles['sbui-listbox-addonbefore']}>
+                  <span className={SelectStyles['paf-listbox-addonbefore']}>
                     {selectedNode?.addOnBefore && <selectedNode.addOnBefore />}
-                    <span className={SelectStyles['sbui-listbox-label']}>
+                    <span className={SelectStyles['paf-listbox-label']}>
                       {selectedNode?.label}
                     </span>
                   </span>
                   <span
-                    className={SelectStyles['sbui-listbox-chevron-container']}
+                    className={SelectStyles['paf-listbox-chevron-container']}
                   >
                     <svg
-                      className={SelectStyles['sbui-listbox-chevron']}
+                      className={SelectStyles['paf-listbox-chevron']}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -148,7 +148,7 @@ function Listbox({
                   </span>
                   {error && (
                     <div
-                      className={SelectStyles['sbui-listbox-actions-container']}
+                      className={SelectStyles['paf-listbox-actions-container']}
                     >
                       {error && <InputErrorIcon size={size} />}
                     </div>
@@ -157,15 +157,15 @@ function Listbox({
                 <Transition
                   show={open}
                   as={Fragment}
-                  leave={SelectStyles['sbui-listbox-transition--leave']}
+                  leave={SelectStyles['paf-listbox-transition--leave']}
                   leaveFrom={
-                    SelectStyles['sbui-listbox-transition--leave-from']
+                    SelectStyles['paf-listbox-transition--leave-from']
                   }
-                  leaveTo={SelectStyles['sbui-listbox-transition--leave-to']}
+                  leaveTo={SelectStyles['paf-listbox-transition--leave-to']}
                 >
                   <HeadlessListbox.Options
                     static
-                    className={SelectStyles['sbui-listbox-option-container']}
+                    className={SelectStyles['paf-listbox-option-container']}
                   >
                     {children}
                   </HeadlessListbox.Options>
@@ -215,12 +215,12 @@ function SelectOption({
         return (
           <div
             className={classNames(
-              SelectStyles['sbui-listbox-option'],
-              active ? SelectStyles['sbui-listbox-option--active'] : ' ',
-              disabled ? SelectStyles['sbui-listbox-option--disabled'] : ' '
+              SelectStyles['paf-listbox-option'],
+              active ? SelectStyles['paf-listbox-option--active'] : ' ',
+              disabled ? SelectStyles['paf-listbox-option--disabled'] : ' '
             )}
           >
-            <div className={SelectStyles['sbui-listbox-option__inner']}>
+            <div className={SelectStyles['paf-listbox-option__inner']}>
               {addOnBefore && addOnBefore({ active, selected })}
               <span>
                 {typeof children === 'function'
@@ -233,13 +233,13 @@ function SelectOption({
               <span
                 className={classNames(
                   active
-                    ? SelectStyles['sbui-listbox-option__check--active']
+                    ? SelectStyles['paf-listbox-option__check--active']
                     : '',
-                  SelectStyles['sbui-listbox-option__check']
+                  SelectStyles['paf-listbox-option__check']
                 )}
               >
                 <IconCheck
-                  className={SelectStyles['sbui-listbox-option__check__icon']}
+                  className={SelectStyles['paf-listbox-option__check__icon']}
                   aria-hidden="true"
                 />
               </span>

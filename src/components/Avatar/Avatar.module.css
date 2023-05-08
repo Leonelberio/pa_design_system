@@ -1,29 +1,29 @@
-.sbui-avatar {
+.paf-avatar {
     @apply rounded-full;
 }
 
-.sbui-avatar-type-rounded {
+.paf-avatar-type-rounded {
     border-radius: 10%;
 }
 
-.sbui-avatar-type-square {
+.paf-avatar-type-square {
     border-radius: 0;
 }
 
-.sbui-avatar-image {
+.paf-avatar-image {
     object-fit: 'contain';
     border-radius: '50%';
     height: 3rem;
     width: 3rem;
 }
 
-.sbui-avatar-children {
+.paf-avatar-children {
     @apply flex;
     @apply justify-center;
     @apply items-center
 }
 
-.sbui-avatar-icon {
+.paf-avatar-icon {
     @apply flex;
     @apply justify-center;
     @apply items-center;
@@ -32,7 +32,7 @@
     width: 3rem;
 }
 
-.sbui-avatar-text {
+.paf-avatar-text {
     @apply flex;
     @apply justify-center;
     @apply items-center;
@@ -42,7 +42,7 @@
     width: 3rem;
 }
 
-.sbui-avatar-fallback {
+.paf-avatar-fallback {
     @apply flex;
     @apply justify-center;
     @apply items-center;
@@ -51,15 +51,15 @@
     width: 3rem;
 }
 
-.sbui-avatar-single {
+.paf-avatar-single {
 
 }
 
-.sbui-avatar-multiple {
+.paf-avatar-multiple {
 
 }
 
-.sbui-image-responsive {
+.paf-image-responsive {
     width: 100%;
     height: auto;  
 }

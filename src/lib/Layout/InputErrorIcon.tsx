@@ -12,7 +12,7 @@ interface Props {
 export default function InputErrorIcon({ style, size }: Props) {
   return (
     <div
-      className={InputErrorIconStyles['sbui-input-error-icon']}
+      className={InputErrorIconStyles['paf-input-error-icon']}
       style={style}
     >
       <IconAlertCircle

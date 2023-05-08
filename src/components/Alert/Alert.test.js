@@ -17,7 +17,7 @@ describe('#Alert', () => {
       </Alert>
     )
     expect(container.querySelector('div')).toHaveClass(
-      `sbui-alert-container sbui-alert-container--success custom classes`
+      `paf-alert-container paf-alert-container--success custom classes`
     )
   })
 
@@ -48,7 +48,7 @@ describe('#Alert', () => {
   })
 
   it.each(VARIANTS)(
-    'should have "sbui-alert-[container|description]--%s" class',
+    'should have "paf-alert-[container|description]--%s" class',
     (variant) => {
       const { container } = render(
         <Alert title="Required Title" variant={variant}>
@@ -57,10 +57,10 @@ describe('#Alert', () => {
       )
 
       expect(container.querySelector('div')).toHaveClass(
-        `sbui-alert-container sbui-alert-container--${variant}`
+        `paf-alert-container paf-alert-container--${variant}`
       )
       expect(screen.queryByText('Description')).toHaveClass(
-        `sbui-alert-description sbui-alert-description--${variant}`
+        `paf-alert-description paf-alert-description--${variant}`
       )
     }
   )

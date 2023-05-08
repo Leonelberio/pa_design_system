@@ -46,11 +46,11 @@ export function Item({
   showActiveBar = false,
   style,
 }: ItemProps) {
-  let classes = [MenuStyles['sbui-menu__item']]
-  if (active) classes.push(MenuStyles['sbui-menu__item--active'])
+  let classes = [MenuStyles['paf-menu__item']]
+  if (active) classes.push(MenuStyles['paf-menu__item--active'])
   if (active && showActiveBar)
-    classes.push(MenuStyles['sbui-menu__item--active--bar'])
-  if (rounded) classes.push(MenuStyles['sbui-menu__item--rounded'])
+    classes.push(MenuStyles['paf-menu__item--active--bar'])
+  if (rounded) classes.push(MenuStyles['paf-menu__item--rounded'])
 
   const itemOnClick = onClick
 
@@ -74,7 +74,7 @@ export function Item({
             <Typography.Text>
               <Space>
                 {icon && icon}
-                <span className={MenuStyles['sbui-menu__content']}>
+                <span className={MenuStyles['paf-menu__content']}>
                   {children}
                 </span>
               </Space>
@@ -94,7 +94,7 @@ interface GroupProps {
 
 export function Group({ children, icon, title }: GroupProps) {
   return (
-    <div className={MenuStyles['sbui-menu__group']}>
+    <div className={MenuStyles['paf-menu__group']}>
       <Space>
         {icon && icon}
         <Typography.Text type="secondary">{title}</Typography.Text>
@@ -110,9 +110,9 @@ interface MiscProps {
 
 export function Misc({ children }: MiscProps) {
   return (
-    <div className={MenuStyles['sbui-menu__misc']}>
+    <div className={MenuStyles['paf-menu__misc']}>
       <Typography.Text>
-        <span className={MenuStyles['sbui-menu__content']}>{children}</span>
+        <span className={MenuStyles['paf-menu__content']}>{children}</span>
       </Typography.Text>
     </div>
   )

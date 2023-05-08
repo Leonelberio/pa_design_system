@@ -39,25 +39,25 @@ export function FormLayout({
   beforeLabel,
   afterLabel,
 }: Props) {
-  let containerClasses = [FormLayoutStyles['sbui-formlayout']]
+  let containerClasses = [FormLayoutStyles['paf-formlayout']]
 
   if (size) {
-    containerClasses.push(FormLayoutStyles[`sbui-formlayout--${size}`])
+    containerClasses.push(FormLayoutStyles[`paf-formlayout--${size}`])
   }
 
   if (flex) {
-    containerClasses.push(FormLayoutStyles['sbui-formlayout--flex'])
+    containerClasses.push(FormLayoutStyles['paf-formlayout--flex'])
     if (align === 'left') {
-      containerClasses.push(FormLayoutStyles['sbui-formlayout--flex-left'])
+      containerClasses.push(FormLayoutStyles['paf-formlayout--flex-left'])
     }
     if (align === 'right') {
-      containerClasses.push(FormLayoutStyles['sbui-formlayout--flex-right'])
+      containerClasses.push(FormLayoutStyles['paf-formlayout--flex-right'])
     }
   } else {
     containerClasses.push(
       responsive
-        ? FormLayoutStyles['sbui-formlayout--responsive']
-        : FormLayoutStyles['sbui-formlayout--non-responsive']
+        ? FormLayoutStyles['paf-formlayout--responsive']
+        : FormLayoutStyles['paf-formlayout--non-responsive']
     )
   }
 
@@ -80,18 +80,18 @@ export function FormLayout({
           className={
             '' +
             (layout !== 'horizontal' && !flex
-              ? FormLayoutStyles['sbui-formlayout__label-container-horizontal']
-              : FormLayoutStyles['sbui-formlayout__label-container-vertical'])
+              ? FormLayoutStyles['paf-formlayout__label-container-horizontal']
+              : FormLayoutStyles['paf-formlayout__label-container-vertical'])
           }
         >
           {labelled && (
             <label
-              className={FormLayoutStyles['sbui-formlayout__label']}
+              className={FormLayoutStyles['paf-formlayout__label']}
               htmlFor={id}
             >
               {beforeLabel && (
                 <span
-                  className={FormLayoutStyles['sbui-formlayout__label-before']}
+                  className={FormLayoutStyles['paf-formlayout__label-before']}
                   id={id + '-before'}
                 >
                   {beforeLabel}
@@ -100,7 +100,7 @@ export function FormLayout({
               {label}
               {afterLabel && (
                 <span
-                  className={FormLayoutStyles['sbui-formlayout__label-after']}
+                  className={FormLayoutStyles['paf-formlayout__label-after']}
                   id={id + '-after'}
                 >
                   {afterLabel}
@@ -110,7 +110,7 @@ export function FormLayout({
           )}
           {labelOptional && (
             <span
-              className={FormLayoutStyles['sbui-formlayout__label-opt']}
+              className={FormLayoutStyles['paf-formlayout__label-opt']}
               id={id + '-optional'}
             >
               {labelOptional}
@@ -121,21 +121,21 @@ export function FormLayout({
       <div
         className={
           layout !== 'horizontal'
-            ? FormLayoutStyles['sbui-formlayout__content-container-horizontal']
-            : FormLayoutStyles['sbui-formlayout__content-container-vertical'] +
+            ? FormLayoutStyles['paf-formlayout__content-container-horizontal']
+            : FormLayoutStyles['paf-formlayout__content-container-vertical'] +
               (align === 'right'
-                ? ` ${FormLayoutStyles['sbui-formlayout__content-container-vertical--align-right']}`
+                ? ` ${FormLayoutStyles['paf-formlayout__content-container-vertical--align-right']}`
                 : '')
         }
         style={style}
       >
         {children}
         {error && (
-          <p className={FormLayoutStyles['sbui-formlayout__error']}>{error}</p>
+          <p className={FormLayoutStyles['paf-formlayout__error']}>{error}</p>
         )}
         {descriptionText && (
           <p
-            className={FormLayoutStyles['sbui-formlayout__description']}
+            className={FormLayoutStyles['paf-formlayout__description']}
             id={id + '-description'}
           >
             {descriptionText}

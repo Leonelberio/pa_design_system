@@ -136,9 +136,9 @@ export function Checkbox({
         const active = checked ?? undefined
 
         let containerClasses = [
-          CheckboxStyles['sbui-checkbox-container'],
+          CheckboxStyles['paf-checkbox-container'],
           CheckboxStyles[
-            `sbui-checkbox-container--${parentSize ? parentSize : size}`
+            `paf-checkbox-container--${parentSize ? parentSize : size}`
           ],
         ]
         if (className) containerClasses.push(className)
@@ -156,7 +156,7 @@ export function Checkbox({
               id={markupId}
               name={markupName}
               type="checkbox"
-              className={CheckboxStyles['sbui-checkbox']}
+              className={CheckboxStyles['paf-checkbox']}
               onChange={onInputChange}
               onFocus={onFocus ? (event) => onFocus(event) : undefined}
               onBlur={onBlur ? (event) => onBlur(event) : undefined}
@@ -165,24 +165,24 @@ export function Checkbox({
               disabled={disabled}
               {...props}
             />
-            <div className={CheckboxStyles['sbui-checkbox__label-container']}>
+            <div className={CheckboxStyles['paf-checkbox__label-container']}>
               <label
                 className={
-                  CheckboxStyles['sbui-checkbox__label-container__label']
+                  CheckboxStyles['paf-checkbox__label-container__label']
                 }
                 htmlFor={markupId}
               >
                 <span
                   className={
                     CheckboxStyles[
-                      'sbui-checkbox__label-container__label__span'
+                      'paf-checkbox__label-container__label__span'
                     ]
                   }
                 >
                   {beforeLabel && (
                     <span
                       className={
-                        CheckboxStyles['sbui-checkbox__label-text-before']
+                        CheckboxStyles['paf-checkbox__label-text-before']
                       }
                     >
                       {beforeLabel}
@@ -192,7 +192,7 @@ export function Checkbox({
                   {afterLabel && (
                     <span
                       className={
-                        CheckboxStyles['sbui-checkbox__label-text-after']
+                        CheckboxStyles['paf-checkbox__label-text-after']
                       }
                     >
                       {afterLabel}
@@ -203,7 +203,7 @@ export function Checkbox({
                 {description && (
                   <p
                     className={
-                      CheckboxStyles['sbui-checkbox__label-container__label__p']
+                      CheckboxStyles['paf-checkbox__label-container__label__p']
                     }
                   >
                     {description}

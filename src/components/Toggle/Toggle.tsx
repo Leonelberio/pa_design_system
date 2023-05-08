@@ -54,13 +54,13 @@ function Toggle({
   }
 
   let toggleClasses = [
-    ToggleStyles['sbui-toggle'],
-    ToggleStyles[`sbui-toggle--${size}`],
+    ToggleStyles['paf-toggle'],
+    ToggleStyles[`paf-toggle--${size}`],
   ]
-  if (active) toggleClasses.push(ToggleStyles['sbui-toggle--active'])
+  if (active) toggleClasses.push(ToggleStyles['paf-toggle--active'])
 
-  let handleClasses = [ToggleStyles['sbui-toggle__handle']]
-  if (active) handleClasses.push(ToggleStyles['sbui-toggle__handle--active'])
+  let handleClasses = [ToggleStyles['paf-toggle__handle']]
+  if (active) handleClasses.push(ToggleStyles['paf-toggle__handle--active'])
 
   return (
     <FormLayout

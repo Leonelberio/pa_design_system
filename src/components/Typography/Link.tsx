@@ -21,8 +21,8 @@ function Link({
   style,
 }: Props) {
   let classes = [
-    LinkStyles['sbui-typography'],
-    LinkStyles['sbui-typography-link'],
+    LinkStyles['paf-typography'],
+    LinkStyles['paf-typography-link'],
   ]
   if (className) {
     classes.push(className)

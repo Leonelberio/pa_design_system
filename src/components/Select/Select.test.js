@@ -21,7 +21,7 @@ describe('#Select', () => {
       </Select>
     )
     expect(screen.queryByTestId('form-select')).toHaveClass(
-      'sbui-select sbui-select--error sbui-select--medium'
+      'paf-select paf-select--error paf-select--medium'
     )
   })
 })

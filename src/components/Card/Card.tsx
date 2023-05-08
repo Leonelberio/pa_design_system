@@ -23,20 +23,20 @@ function Card({
   title,
   titleExtra,
 }: CardProps) {
-  let classes = [CardStyles['sbui-card']]
-  if (hoverable) classes.push(CardStyles['sbui-card--hoverable'])
+  let classes = [CardStyles['paf-card']]
+  if (hoverable) classes.push(CardStyles['paf-card--hoverable'])
   if (className) classes.push(className)
 
   return (
     <div className={classes.join(' ')} style={style}>
       {title && (
-        <div className={CardStyles['sbui-card-head']}>
+        <div className={CardStyles['paf-card-head']}>
           <Typography.Text style={{ margin: 0 }}>{title}</Typography.Text>
           <Typography.Link style={{ margin: 0 }}>{titleExtra}</Typography.Link>
         </div>
       )}
       {cover}
-      <div className={CardStyles['sbui-card-content']}>{children}</div>
+      <div className={CardStyles['paf-card-content']}>{children}</div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import InputIconContainerStyles from './InputIconContainer.module.css'
 
 export default function InputIconContainer({ icon }: any) {
   return (
-    <div className={InputIconContainerStyles['sbui-input-icon-container']}>
+    <div className={InputIconContainerStyles['paf-input-icon-container']}>
       {icon}
     </div>
   )

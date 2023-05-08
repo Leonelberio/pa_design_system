@@ -46,7 +46,7 @@ function Popover({
   sideOffset = 6,
   style,
 }: RootProps) {
-  let classes = [DropdownStyles['sbui-popover__content']]
+  let classes = [DropdownStyles['paf-popover__content']]
   if (className) {
     classes.push(className)
   }
@@ -59,7 +59,7 @@ function Popover({
       open={open}
     >
       <RadixPopover.Trigger
-        className={DropdownStyles['sbui-popover__trigger']}
+        className={DropdownStyles['paf-popover__trigger']}
         aria-label={ariaLabel}
       >
         {children}
@@ -75,13 +75,13 @@ function Popover({
       >
         {arrow && (
           <RadixPopover.Arrow
-            className={DropdownStyles['sbui-popover__arrow']}
+            className={DropdownStyles['paf-popover__arrow']}
             offset={10}
           ></RadixPopover.Arrow>
         )}
         {overlay}
         {showClose && (
-          <RadixPopover.Close className={DropdownStyles['sbui-popover__close']}>
+          <RadixPopover.Close className={DropdownStyles['paf-popover__close']}>
             <IconX size={16} />
           </RadixPopover.Close>
         )}

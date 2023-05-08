@@ -73,7 +73,7 @@ function Auth({
 
   const verticalSocialLayout = socialLayout === 'vertical' ? true : false
 
-  let containerClasses = [AuthStyles['sbui-auth']]
+  let containerClasses = [AuthStyles['paf-auth']]
   if (className) {
     containerClasses.push(className)
   }
@@ -231,7 +231,7 @@ function SocialAuth({
           <Space size={4} direction={'vertical'}>
             <Typography.Text
               type="secondary"
-              className={AuthStyles['sbui-auth-label']}
+              className={AuthStyles['paf-auth-label']}
             >
               Sign in with
             </Typography.Text>

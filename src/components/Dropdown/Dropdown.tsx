@@ -36,7 +36,7 @@ function Dropdown({
   arrow,
   isNested,
 }: RootProps) {
-  let classes = [DropdownStyles['sbui-dropdown__content']]
+  let classes = [DropdownStyles['paf-dropdown__content']]
   if (className) {
     classes.push(className)
   }
@@ -45,13 +45,13 @@ function Dropdown({
     <RadixDropdown.Root onOpenChange={onOpenChange} open={open}>
       {isNested ? (
         <RadixDropdown.TriggerItem
-          className={DropdownStyles['sbui-dropdown__trigger-item']}
+          className={DropdownStyles['paf-dropdown__trigger-item']}
         >
           {children}
         </RadixDropdown.TriggerItem>
       ) : (
         <RadixDropdown.Trigger
-          className={DropdownStyles['sbui-dropdown__trigger']}
+          className={DropdownStyles['paf-dropdown__trigger']}
         >
           {children}
         </RadixDropdown.Trigger>
@@ -67,7 +67,7 @@ function Dropdown({
       >
         {arrow && (
           <RadixDropdown.Arrow
-            className={DropdownStyles['sbui-dropdown__arrow']}
+            className={DropdownStyles['paf-dropdown__arrow']}
             offset={10}
           ></RadixDropdown.Arrow>
         )}
@@ -87,7 +87,7 @@ interface ItemProps {
 export function Item({ children, icon, disabled, onClick }: ItemProps) {
   return (
     <RadixDropdown.Item
-      className={DropdownStyles['sbui-dropdown-item']}
+      className={DropdownStyles['paf-dropdown-item']}
       disabled={disabled}
       onSelect={onClick}
     >
@@ -99,7 +99,7 @@ export function Item({ children, icon, disabled, onClick }: ItemProps) {
 
 export function TriggerItem({ children, icon, disabled }: ItemProps) {
   return (
-    <div className={DropdownStyles['sbui-dropdown-item-trigger']}>
+    <div className={DropdownStyles['paf-dropdown-item-trigger']}>
       {icon && icon}
       <span>{children}</span>
     </div>
@@ -108,7 +108,7 @@ export function TriggerItem({ children, icon, disabled }: ItemProps) {
 
 export function Misc({ children, icon }: ItemProps) {
   return (
-    <div className={DropdownStyles['sbui-dropdown-misc']}>
+    <div className={DropdownStyles['paf-dropdown-misc']}>
       {icon && icon}
       {children}
     </div>
@@ -141,11 +141,11 @@ export function Checkbox({
     <RadixDropdown.CheckboxItem
       checked={checked}
       onCheckedChange={handleChange}
-      className={`${DropdownStyles['sbui-dropdown-item']} ${DropdownStyles['sbui-dropdown-input']}`}
+      className={`${DropdownStyles['paf-dropdown-item']} ${DropdownStyles['paf-dropdown-input']}`}
       disabled={disabled}
     >
       <RadixDropdown.ItemIndicator
-        className={DropdownStyles['sbui-dropdown-input__check']}
+        className={DropdownStyles['paf-dropdown-input__check']}
       >
         {ItemIndicator ? ItemIndicator : <IconCheck size="tiny" />}
         <RadixDropdown.CheckboxItem />
@@ -165,10 +165,10 @@ export function Radio({ children, value, ItemIndicator }: RadioProps) {
   return (
     <RadixDropdown.RadioItem
       value={value}
-      className={`${DropdownStyles['sbui-dropdown-item']} ${DropdownStyles['sbui-dropdown-input']}`}
+      className={`${DropdownStyles['paf-dropdown-item']} ${DropdownStyles['paf-dropdown-input']}`}
     >
       <RadixDropdown.ItemIndicator
-        className={DropdownStyles['sbui-dropdown-input__check']}
+        className={DropdownStyles['paf-dropdown-input__check']}
       >
         {ItemIndicator ? ItemIndicator : <IconCheck size="tiny" />}
       </RadixDropdown.ItemIndicator>
@@ -208,7 +208,7 @@ interface LabelProps {
 
 export function Label({ children }: LabelProps) {
   return (
-    <RadixDropdown.Label className={DropdownStyles['sbui-dropdown-label']}>
+    <RadixDropdown.Label className={DropdownStyles['paf-dropdown-label']}>
       {children}
     </RadixDropdown.Label>
   )

@@ -1,20 +1,20 @@
-.sbui-image {
+.paf-image {
 
 }
 
-.sbui-image-circle {
+.paf-image-circle {
     @apply rounded-full;
 }
 
-.sbui-image-normal {
+.paf-image-normal {
 
 }
 
-.sbui-image-rounded {
+.paf-image-rounded {
     @apply rounded
 }
 
-.sbui-image-responsive {
+.paf-image-responsive {
     @apply w-full;
     @apply h-auto;
 

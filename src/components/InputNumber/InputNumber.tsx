@@ -67,11 +67,11 @@ function InputNumber({
   max,
   borderless = false,
 }: Props) {
-  const inputClasses = [InputNumberStyles['sbui-inputnumber']]
+  const inputClasses = [InputNumberStyles['paf-inputnumber']]
 
   const iconUpClasses = [
-    InputNumberStyles['sbui-inputnumber-button'],
-    InputNumberStyles['sbui-inputnumber-button-up'],
+    InputNumberStyles['paf-inputnumber-button'],
+    InputNumberStyles['paf-inputnumber-button-up'],
   ]
 
   const inputRefCurrent = inputRef
@@ -79,23 +79,23 @@ function InputNumber({
     : React.createRef<HTMLInputElement>()
 
   const iconDownClasses = [
-    InputNumberStyles['sbui-inputnumber-button'],
-    InputNumberStyles['sbui-inputnumber-button-down'],
+    InputNumberStyles['paf-inputnumber-button'],
+    InputNumberStyles['paf-inputnumber-button-down'],
   ]
 
-  const iconNavClasses = [InputNumberStyles['sbui-inputnumber-nav']]
+  const iconNavClasses = [InputNumberStyles['paf-inputnumber-nav']]
 
-  if (error) inputClasses.push(InputNumberStyles['sbui-inputnumber--error'])
+  if (error) inputClasses.push(InputNumberStyles['paf-inputnumber--error'])
 
-  if (icon) inputClasses.push(InputNumberStyles['sbui-inputnumber--with-icon'])
+  if (icon) inputClasses.push(InputNumberStyles['paf-inputnumber--with-icon'])
 
   if (size) {
-    inputClasses.push(InputNumberStyles[`sbui-inputnumber--${size}`])
-    iconNavClasses.push(InputNumberStyles[`sbui-inputnumber-nav--${size}`])
+    inputClasses.push(InputNumberStyles[`paf-inputnumber--${size}`])
+    iconNavClasses.push(InputNumberStyles[`paf-inputnumber-nav--${size}`])
   }
 
   if (borderless)
-    inputClasses.push(InputNumberStyles['sbui-inputnumber--borderless'])
+    inputClasses.push(InputNumberStyles['paf-inputnumber--borderless'])
 
   const onClickChevronUp = () => {
     inputRefCurrent.current?.stepUp()
@@ -137,7 +137,7 @@ function InputNumber({
         style={style}
         size={size}
       >
-        <div className={InputNumberStyles['sbui-inputnumber-container']}>
+        <div className={InputNumberStyles['paf-inputnumber-container']}>
           <input
             autoComplete={autoComplete}
             autoFocus={autofocus}
@@ -177,7 +177,7 @@ function InputNumber({
           {error ? (
             <Space
               className={
-                InputNumberStyles['sbui-inputnumber-actions-container']
+                InputNumberStyles['paf-inputnumber-actions-container']
               }
               size={1}
             >

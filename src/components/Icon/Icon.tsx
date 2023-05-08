@@ -88,7 +88,7 @@ function Icon({
         // default these icons to use 'currentColor' ie, the text color
         const noColor = !color && !fill && !stroke
 
-        let classes = ['sbui-icon', className]
+        let classes = ['paf-icon', className]
         if (contextClassName) {
           classes.push(contextClassName)
         }
@@ -113,8 +113,8 @@ function Icon({
         return background ? (
           <div
             // circle coloured background
-            className={`${IconStyles['sbui-icon-container']} ${
-              IconStyles[`sbui-icon-container--${background}`]
+            className={`${IconStyles['paf-icon-container']} ${
+              IconStyles[`paf-icon-container--${background}`]
             }`}
           >
             {Icon}

@@ -1,15 +1,15 @@
-.sbui-loading {
+.paf-loading {
   @apply transition-all relative;
 }
 
-.sbui-loading--active .sbui-loading-content {
+.paf-loading--active .paf-loading-content {
   opacity: 0.4;
 }
-.sbui-loading-content {
+.paf-loading-content {
   @apply transition-opacity duration-300;
 }
 
-.sbui-loading-spinner {
+.paf-loading-spinner {
   @apply text-brand-800 animate-spin;
   margin: auto;
   position: absolute;

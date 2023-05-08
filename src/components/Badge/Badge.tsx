@@ -18,20 +18,20 @@ interface Props {
 }
 
 function Badge({ color, children, size, dot }: Props) {
-  let classes = [BadgeStyles['sbui-badge']]
+  let classes = [BadgeStyles['paf-badge']]
   if (color) {
-    classes.push(BadgeStyles[`sbui-badge--${color}`])
+    classes.push(BadgeStyles[`paf-badge--${color}`])
   }
   if (size === 'large') {
-    classes.push(BadgeStyles['sbui-badge--large'])
+    classes.push(BadgeStyles['paf-badge--large'])
   }
 
   return (
     <span className={classes.join(' ')}>
       {dot && (
         <svg
-          className={`${BadgeStyles[`sbui-badge-dot`]} ${
-            BadgeStyles[`sbui-badge--${color}`]
+          className={`${BadgeStyles[`paf-badge-dot`]} ${
+            BadgeStyles[`paf-badge--${color}`]
           }`}
           fill="currentColor"
           viewBox="0 0 8 8"

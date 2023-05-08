@@ -19,10 +19,10 @@ export default function Image({
     alt,
     responsive
 }: Props){
-    let classes = [ImageStyles['sbui-image-normal']]
-    classes.push(type === 'rounded' && ImageStyles['sbui-image-rounded'])
-    classes.push(type === 'circle' && ImageStyles['sbui-image-circle']) 
-    if(responsive) classes.push(ImageStyles['sbui-image-responsive'])
+    let classes = [ImageStyles['paf-image-normal']]
+    classes.push(type === 'rounded' && ImageStyles['paf-image-rounded'])
+    classes.push(type === 'circle' && ImageStyles['paf-image-circle']) 
+    if(responsive) classes.push(ImageStyles['paf-image-responsive'])
     if (className) classes.push(className)
     return (
         <>

@@ -40,9 +40,9 @@ function Accordion({
   bordered,
   onChange,
 }: AccordionProps) {
-  let containerClasses = [AccordionStyles['sbui-accordion-container']]
+  let containerClasses = [AccordionStyles['paf-accordion-container']]
   if (bordered) {
-    containerClasses.push(AccordionStyles['sbui-accordion-container--bordered'])
+    containerClasses.push(AccordionStyles['paf-accordion-container--bordered'])
   }
   if (className) {
     containerClasses.push(className)
@@ -73,9 +73,9 @@ export function Item({ children, className, label, id }: ItemProps) {
   const { defaultActiveId, icon, iconPosition, onChange } =
     useContext(AccordionContext)
 
-  let panelClasses = [AccordionStyles['sbui-accordion-item__panel']]
+  let panelClasses = [AccordionStyles['paf-accordion-item__panel']]
 
-  let buttonClasses = [AccordionStyles['sbui-accordion-item__button']]
+  let buttonClasses = [AccordionStyles['paf-accordion-item__button']]
   if (className) {
     buttonClasses.push(className)
   }
@@ -98,7 +98,7 @@ export function Item({ children, className, label, id }: ItemProps) {
           <Disclosure.Button
             className={
               open
-                ? `${buttonClasses.join(' ')} sbui-accordion-item__button--open`
+                ? `${buttonClasses.join(' ')} paf-accordion-item__button--open`
                 : buttonClasses.join(' ')
             }
           >
@@ -108,12 +108,12 @@ export function Item({ children, className, label, id }: ItemProps) {
           </Disclosure.Button>
           <Transition
             show={open}
-            enter={AccordionStyles[`sbui-accordion-item__panel--enter`]}
-            enterFrom={AccordionStyles[`sbui-accordion-item__panel--enterFrom`]}
-            enterTo={AccordionStyles[`sbui-accordion-item__panel--enterTo`]}
-            leave={AccordionStyles[`sbui-accordion-item__panel--leave`]}
-            leaveFrom={AccordionStyles[`sbui-accordion-item__panel--leaveFrom`]}
-            leaveTo={AccordionStyles[`sbui-accordion-item__panel--leaveTo`]}
+            enter={AccordionStyles[`paf-accordion-item__panel--enter`]}
+            enterFrom={AccordionStyles[`paf-accordion-item__panel--enterFrom`]}
+            enterTo={AccordionStyles[`paf-accordion-item__panel--enterTo`]}
+            leave={AccordionStyles[`paf-accordion-item__panel--leave`]}
+            leaveFrom={AccordionStyles[`paf-accordion-item__panel--leaveFrom`]}
+            leaveTo={AccordionStyles[`paf-accordion-item__panel--leaveTo`]}
             afterEnter={handleOnChange(open)}
             afterLeave={handleOnChange(open)}
           >

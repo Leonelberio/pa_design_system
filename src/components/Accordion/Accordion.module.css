@@ -1,18 +1,18 @@
-.sbui-accordion-container {
+.paf-accordion-container {
   @apply flex flex-col rounded-md;
 }
 
-.sbui-accordion-container--bordered {
+.paf-accordion-container--bordered {
   @apply border border-solid;
   @apply bg-white border-gray-200;
   @apply dark:bg-dark-700 dark:border-darkmode;
 }
 
-.sbui-accordion-item {
+.paf-accordion-item {
   @apply w-full;
 }
 
-.sbui-accordion-item__button {
+.paf-accordion-item__button {
   @apply flex justify-between w-full text-left cursor-pointer px-6 py-4 border-0 border-solid font-medium text-base rounded-t-md bg-transparent;
 
   @apply border-gray-200 text-gray-500 hover:text-gray-600;
@@ -22,51 +22,51 @@
   font-weight: inherit;
 }
 
-.sbui-accordion-item__button .sbui-typography-text {
+.paf-accordion-item__button .paf-typography-text {
   @apply w-full max-w-none;
 }
 
-.sbui-accordion-item__button .sbui-typography-text:last-child {
+.paf-accordion-item__button .paf-typography-text:last-child {
   @apply pl-2;
 }
 
-.sbui-accordion-item__button .sbui-icon {
+.paf-accordion-item__button .paf-icon {
   @apply mt-px;
 }
 
-.sbui-accordion-item__button--open .sbui-icon {
+.paf-accordion-item__button--open .paf-icon {
   @apply transform rotate-180;
 }
 
-.sbui-accordion-container--bordered
-  .sbui-accordion-item__button:not(:first-child) {
+.paf-accordion-container--bordered
+  .paf-accordion-item__button:not(:first-child) {
   @apply rounded-none border-t border-gray-200 dark:border-darkmode;
 }
 
-.sbui-accordion-item__panel {
+.paf-accordion-item__panel {
   @apply px-6 py-4;
 }
 
-.sbui-accordion-item__panel--enter {
+.paf-accordion-item__panel--enter {
   @apply transition-max-height ease-in-out duration-700 overflow-hidden;
 }
 
-.sbui-accordion-item__panel--enterFrom {
+.paf-accordion-item__panel--enterFrom {
   @apply max-h-0;
 }
 
-.sbui-accordion-item__panel--enterTo {
+.paf-accordion-item__panel--enterTo {
   @apply max-h-screen;
 }
 
-.sbui-accordion-item__panel--leave {
+.paf-accordion-item__panel--leave {
   @apply transition-max-height ease-in-out duration-300 overflow-hidden;
 }
 
-.sbui-accordion-item__panel--leaveFrom {
+.paf-accordion-item__panel--leaveFrom {
   @apply max-h-screen;
 }
 
-.sbui-accordion-item__panel--leaveTo {
+.paf-accordion-item__panel--leaveTo {
   @apply max-h-0;
 }

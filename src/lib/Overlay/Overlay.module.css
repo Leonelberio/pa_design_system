@@ -2,42 +2,42 @@
  Overlay animations imported first as so placement styles are not affected.
 */
 
-.sbui-overlay--enter {
+.paf-overlay--enter {
   @apply transition ease-out duration-100;
 }
-.sbui-overlay--enterFrom {
+.paf-overlay--enterFrom {
   @apply transform opacity-0 scale-95;
 }
-.sbui-overlay--enterTo {
+.paf-overlay--enterTo {
   @apply transform opacity-100 scale-100;
 }
-.sbui-overlay--leave {
+.paf-overlay--leave {
   @apply transition ease-in duration-75;
 }
-.sbui-overlay--leaveFrom {
+.paf-overlay--leaveFrom {
   @apply transform opacity-100 scale-100;
 }
-.sbui-overlay--leaveTo {
+.paf-overlay--leaveTo {
   @apply transform opacity-0 scale-95;
 }
 
-.sbui-overlay {
+.paf-overlay {
   @apply relative inline-block;
 }
 
-.sbui-overlay-container {
+.paf-overlay-container {
   @apply w-56;
 }
 
-.sbui-overlay-container--bottomRight {
+.paf-overlay-container--bottomRight {
   @apply absolute origin-top-right right-0 mt-2;
 }
 
-.sbui-overlay-container--bottomLeft {
+.paf-overlay-container--bottomLeft {
   @apply absolute origin-top-left left-0 mt-2;
 }
 
-.sbui-overlay-container--bottomCenter {
+.paf-overlay-container--bottomCenter {
   margin-top: 0.5rem;
   position: absolute;
   transform-origin: center;
@@ -47,7 +47,7 @@
   transform: translateX(-50%);
 }
 
-.sbui-overlay-container--topRight {
+.paf-overlay-container--topRight {
   @apply origin-bottom-right;
   margin-top: -0.5rem;
   position: absolute;
@@ -56,7 +56,7 @@
   transform: translatey(-100%);
 }
 
-.sbui-overlay-container--topLeft {
+.paf-overlay-container--topLeft {
   @apply origin-bottom-left;
   margin-top: -0.5rem;
   position: absolute;
@@ -65,7 +65,7 @@
   transform: translatey(-100%);
 }
 
-.sbui-overlay-container--topCenter {
+.paf-overlay-container--topCenter {
   @apply origin-bottom-left;
   margin-top: -0.5rem;
   position: absolute;

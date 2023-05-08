@@ -1,33 +1,33 @@
-.sbui-typography-text {
+.paf-typography-text {
   @apply text-sm;
   @apply text-typography-body-light dark:text-typography-body-dark;
 }
 
-.sbui-typography-text-small {
+.paf-typography-text-small {
   @apply text-xs;
 }
 
-.sbui-typography-text-secondary {
+.paf-typography-text-secondary {
   @apply text-typography-body-secondary-light;
   @apply dark:text-typography-body-secondary-dark;
 }
 
-.sbui-typography-text-success {
+.paf-typography-text-success {
   @apply text-green-500;
   @apply dark:text-green-500;
 }
 
-.sbui-typography-text-warning {
+.paf-typography-text-warning {
   @apply text-yellow-500;
   @apply dark:text-yellow-500;
 }
 
-.sbui-typography-text-danger {
+.paf-typography-text-danger {
   @apply text-red-500;
   @apply dark:text-red-500;
 }
 
-.sbui-typography-text-disabled {
+.paf-typography-text-disabled {
   @apply text-gray-300;
   @apply dark:text-gray-400;
   /* color: rgba(0,0,0,.25); */
@@ -38,24 +38,24 @@
   user-select: none;
 }
 
-.sbui-typography-text-underline {
+.paf-typography-text-underline {
   @apply underline;
 }
 
-.sbui-typography-text-strikethrough {
+.paf-typography-text-strikethrough {
   @apply line-through;
 }
 
-.sbui-typography-text strong {
+.paf-typography-text strong {
   @apply text-sm;
 }
 
-mark.sbui-typography-text {
+mark.paf-typography-text {
   padding: 0;
   background-color: #ffe58f;
 }
 
-code.sbui-typography-text {
+code.paf-typography-text {
   /* margin: 0 .2em; */
   padding: 0.2em 0.4em 0.1em;
   /* font-size: 85%; */
@@ -64,7 +64,7 @@ code.sbui-typography-text {
   border-radius: 3px;
 }
 
-kbd.sbui-typography-text {
+kbd.paf-typography-text {
   /* margin: 0 .2em; */
   padding: 0.15em 0.4em 0.1em;
   /* font-size: 90%; */

@@ -1,35 +1,35 @@
 /* marker fix */
-.sbui-typography li::marker {
+.paf-typography li::marker {
   display: none;
   content: '';
 }
 
-.sbui-typography-container {
+.paf-typography-container {
   @apply prose prose-sm lg:prose-lg;
 }
 
-.sbui-typography {
+.paf-typography {
   @apply text-base;
   @apply text-gray-400;
 }
 
-/* .sbui-typography--prose-sm {
+/* .paf-typography--prose-sm {
   @apply prose prose-sm;
 }
 
-.sbui-typography--prose-lg {
+.paf-typography--prose-lg {
   @apply prose prose-lg;
 }
 
-.sbui-typography--prose-xl {
+.paf-typography--prose-xl {
   @apply prose prose-xl;
 }
 
-.sbui-typography--prose-2xl {
+.paf-typography--prose-2xl {
   @apply prose prose-2xl;
 } */
 
-.sbui-typography code {
+.paf-typography code {
   padding: 0.2em 0.4em 0.1em;
   background: hsla(0, 0%, 58.8%, 0.1);
   border: 1px solid hsla(0, 0%, 39.2%, 0.2);
@@ -42,55 +42,55 @@
   default styles are handled by tailwind config
 */
 
-.dark .sbui-typography {
+.dark .paf-typography {
   @apply text-gray-200;
 }
 
-.dark .sbui-typography h1 {
+.dark .paf-typography h1 {
   @apply text-white;
 }
 
-.dark .sbui-typography h2 {
+.dark .paf-typography h2 {
   @apply text-white;
 }
 
-.dark .sbui-typography h3 {
+.dark .paf-typography h3 {
   @apply text-white;
 }
 
-.dark .sbui-typography h4 {
+.dark .paf-typography h4 {
   @apply text-white;
 }
 
-.dark .sbui-typography h5 {
+.dark .paf-typography h5 {
   @apply text-white;
 }
 
-.dark .sbui-typography strong {
+.dark .paf-typography strong {
   @apply text-white;
 }
 
-.dark .sbui-typography li::before {
+.dark .paf-typography li::before {
   @apply text-gray-300;
 }
 
-.dark .sbui-typography a {
+.dark .paf-typography a {
   @apply text-white;
 }
 
-.dark .sbui-typography blockquote {
+.dark .paf-typography blockquote {
   @apply text-white;
 }
 
-.dark .sbui-typography code {
+.dark .paf-typography code {
   color: white;
 }
 
-.dark .sbui-typography figcaption {
+.dark .paf-typography figcaption {
   @apply text-gray-600;
 }
 
-.dark .sbui-typography::selection {
+.dark .paf-typography::selection {
   /* @apply bg-brand-500; */
   backgroundcolor: '#6f7bb635';
 }

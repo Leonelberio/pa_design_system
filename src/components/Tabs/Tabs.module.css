@@ -1,4 +1,4 @@
-.sbui-tab-button-underline {
+.paf-tab-button-underline {
   @apply rounded-none border-none;
   @apply hover:text-gray-600 hover:bg-transparent;
   @apply dark:hover:text-white dark:hover:bg-transparent;
@@ -9,7 +9,7 @@
   padding-right: 0;
 }
 
-.sbui-tab-button-underline--active {
+.paf-tab-button-underline--active {
   @apply border-brand-700;
   @apply rounded-none;
   @apply text-gray-600;
@@ -18,7 +18,7 @@
   border-bottom-width: 2px;
 }
 
-.sbui-tab-bar--scrollable {
+.paf-tab-bar--scrollable {
   overflow: auto;
   white-space: nowrap;
   -ms-overflow-style: none; /* IE and Edge */
@@ -26,15 +26,15 @@
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.sbui-tab-bar--scrollable::-webkit-scrollbar {
+.paf-tab-bar--scrollable::-webkit-scrollbar {
   display: none;
 }
 
-.sbui-tab-bar-inner-container {
+.paf-tab-bar-inner-container {
   flex-grow: 1;
 }
 
-.sbui-tab-bar-container {
+.paf-tab-bar-container {
   justify-content: space-between;
   width: 100%;
 }

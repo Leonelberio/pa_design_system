@@ -77,18 +77,18 @@ const Modal = ({
     e.stopPropagation()
   }
 
-  let footerClasses = [ModalStyles['sbui-modal-footer']]
+  let footerClasses = [ModalStyles['paf-modal-footer']]
   if (footerBackground) {
-    footerClasses.push(ModalStyles['sbui-modal-footer--with-bg'])
+    footerClasses.push(ModalStyles['paf-modal-footer--with-bg'])
   }
 
   let modalClasses = [
-    ModalStyles[`sbui-modal`],
-    ModalStyles[`sbui-modal--${size}`],
+    ModalStyles[`paf-modal`],
+    ModalStyles[`paf-modal--${size}`],
   ]
   if (className) modalClasses.push(className)
 
-  let overlayClasses = [ModalStyles['sbui-modal-overlay']]
+  let overlayClasses = [ModalStyles['paf-modal-overlay']]
   if (overlayClassName) overlayClasses.push(overlayClassName)
 
   const footerContent = customFooter ? (
@@ -131,21 +131,21 @@ const Modal = ({
   return (
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       {triggerElement && (
-        <Dialog.Trigger className={ModalStyles[`sbui-modal__trigger`]}>
+        <Dialog.Trigger className={ModalStyles[`paf-modal__trigger`]}>
           {triggerElement}
         </Dialog.Trigger>
       )}
       <Transition show={open}>
         <Dialog.Overlay>
           <Transition.Child
-            enter={ModalStyles[`sbui-modal-overlay--enter`]}
-            enterFrom={ModalStyles[`sbui-modal-overlay--enterFrom`]}
-            enterTo={ModalStyles[`sbui-modal-overlay--enterTo`]}
-            leave={ModalStyles[`sbui-modal-overlay--leave`]}
-            leaveFrom={ModalStyles[`sbui-modal-overlay--leaveFrom`]}
-            leaveTo={ModalStyles[`sbui-modal-overlay--leaveTo`]}
+            enter={ModalStyles[`paf-modal-overlay--enter`]}
+            enterFrom={ModalStyles[`paf-modal-overlay--enterFrom`]}
+            enterTo={ModalStyles[`paf-modal-overlay--enterTo`]}
+            leave={ModalStyles[`paf-modal-overlay--leave`]}
+            leaveFrom={ModalStyles[`paf-modal-overlay--leaveFrom`]}
+            leaveTo={ModalStyles[`paf-modal-overlay--leaveTo`]}
           >
-            <div className={ModalStyles['sbui-modal-overlay-container']}>
+            <div className={ModalStyles['paf-modal-overlay-container']}>
               <div
                 className={overlayClasses.join(' ')}
                 style={overlayStyle}
@@ -155,17 +155,17 @@ const Modal = ({
         </Dialog.Overlay>
         <Dialog.Content forceMount style={{ width: '100vw' }}>
           <div
-            className={ModalStyles['sbui-modal-container'] + ' ' + className}
+            className={ModalStyles['paf-modal-container'] + ' ' + className}
             onClick={() => (onCancel ? onCancel() : null)}
           >
-            <div className={ModalStyles['sbui-modal-flex-container']}>
+            <div className={ModalStyles['paf-modal-flex-container']}>
               <Transition.Child
-                enter={ModalStyles[`sbui-modal--enter`]}
-                enterFrom={ModalStyles[`sbui-modal--enterFrom`]}
-                enterTo={ModalStyles[`sbui-modal--enterTo`]}
-                leave={ModalStyles[`sbui-modal--leave`]}
-                leaveFrom={ModalStyles[`sbui-modal--leaveFrom`]}
-                leaveTo={ModalStyles[`sbui-modal--leaveTo`]}
+                enter={ModalStyles[`paf-modal--enter`]}
+                enterFrom={ModalStyles[`paf-modal--enterFrom`]}
+                enterTo={ModalStyles[`paf-modal--enterTo`]}
+                leave={ModalStyles[`paf-modal--leave`]}
+                leaveFrom={ModalStyles[`paf-modal--leaveFrom`]}
+                leaveTo={ModalStyles[`paf-modal--leaveTo`]}
                 className="fixed inset-0 overflow-y-auto"
               >
                 <div
@@ -177,7 +177,7 @@ const Modal = ({
                   style={style}
                 >
                   <div
-                    className={ModalStyles['sbui-modal-content']}
+                    className={ModalStyles['paf-modal-content']}
                     style={contentStyle}
                   >
                     <Space
@@ -226,7 +226,7 @@ const Modal = ({
                     </div>
                   )}
                   {closable && (
-                    <div className={ModalStyles['sbui-modal-close-container']}>
+                    <div className={ModalStyles['paf-modal-close-container']}>
                       <Button
                         onClick={onCancel}
                         type="text"

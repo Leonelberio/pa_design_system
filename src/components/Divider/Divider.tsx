@@ -21,15 +21,15 @@ export default function Divider({
 }: Props) {
   let classes = [
     type === 'horizontal'
-      ? DividerStyles['sbui-divider']
-      : DividerStyles['sbui-divider-vertical'],
+      ? DividerStyles['paf-divider']
+      : DividerStyles['paf-divider-vertical'],
   ]
-  if (light) classes.push(DividerStyles['sbui-divider--light'])
+  if (light) classes.push(DividerStyles['paf-divider--light'])
 
   if (children) {
-    classes.push(DividerStyles[`sbui-divider--${orientation}`])
+    classes.push(DividerStyles[`paf-divider--${orientation}`])
   } else if (!children && type === 'horizontal') {
-    classes.push(DividerStyles[`sbui-divider--no-text`])
+    classes.push(DividerStyles[`paf-divider--no-text`])
   }
 
   if (className) classes.push(className)
@@ -37,7 +37,7 @@ export default function Divider({
   return (
     <div className={classes.join(' ')} role="seperator" style={style}>
       {children && (
-        <span className={DividerStyles['sbui-divider__content']}>
+        <span className={DividerStyles['paf-divider__content']}>
           {children}
         </span>
       )}

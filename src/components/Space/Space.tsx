@@ -12,10 +12,10 @@ function Space({
   children,
 }: any) {
   const classes = []
-  classes.push(direction === 'vertical' ? 'sbui-space-col' : 'sbui-space-row')
+  classes.push(direction === 'vertical' ? 'paf-space-col' : 'paf-space-row')
   classes.push(
     SpaceStyles[
-      'sbui-' +
+      'paf-' +
         (minus ? 'minus-' : '') +
         'space-' +
         (direction === 'vertical' ? 'y' : 'x') +
@@ -24,7 +24,7 @@ function Space({
     ]
   )
   if (block) {
-    classes.push(SpaceStyles['sbui-space--block'])
+    classes.push(SpaceStyles['paf-space--block'])
   }
   if (className) {
     classes.push(className)

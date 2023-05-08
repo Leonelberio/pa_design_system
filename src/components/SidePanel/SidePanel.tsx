@@ -57,21 +57,21 @@ const SidePanel = ({
     e.stopPropagation()
   }
 
-  const sidePanelClasses = [SlidePanelStyles['sbui-sidepanel']]
+  const sidePanelClasses = [SlidePanelStyles['paf-sidepanel']]
 
   const left = align === 'left'
 
-  const containerClasses = [SlidePanelStyles['sbui-sidepanel-container']]
+  const containerClasses = [SlidePanelStyles['paf-sidepanel-container']]
   if (left) {
-    containerClasses.push(SlidePanelStyles['sbui-sidepanel--left'])
+    containerClasses.push(SlidePanelStyles['paf-sidepanel--left'])
   } else {
-    containerClasses.push(SlidePanelStyles['sbui-sidepanel--right'])
+    containerClasses.push(SlidePanelStyles['paf-sidepanel--right'])
   }
   if (className) containerClasses.push(className)
 
-  let footerClasses = [SlidePanelStyles['sbui-sidepanel-footer-container']]
+  let footerClasses = [SlidePanelStyles['paf-sidepanel-footer-container']]
   if (!customFooter) {
-    footerClasses.push(SlidePanelStyles['sbui-sidepanel-footer'])
+    footerClasses.push(SlidePanelStyles['paf-sidepanel-footer'])
   }
 
   const footerContent = customFooter ? (
@@ -114,24 +114,24 @@ const SidePanel = ({
   return (
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       {triggerElement && (
-        <Dialog.Trigger className={SlidePanelStyles[`sbui-sidepanel__trigger`]}>
+        <Dialog.Trigger className={SlidePanelStyles[`paf-sidepanel__trigger`]}>
           {triggerElement}
         </Dialog.Trigger>
       )}
       <Transition show={open}>
         <Dialog.Overlay forceMount>
           <Transition.Child
-            enter={SlidePanelStyles[`sbui-sidepanel-overlay--enter`]}
-            enterFrom={SlidePanelStyles[`sbui-sidepanel-overlay--enterFrom`]}
-            enterTo={SlidePanelStyles[`sbui-sidepanel-overlay--enterTo`]}
-            leave={SlidePanelStyles[`sbui-sidepanel-overlay--leave`]}
-            leaveFrom={SlidePanelStyles[`sbui-sidepanel-overlay--leaveFrom`]}
-            leaveTo={SlidePanelStyles[`sbui-sidepanel-overlay--leaveTo`]}
+            enter={SlidePanelStyles[`paf-sidepanel-overlay--enter`]}
+            enterFrom={SlidePanelStyles[`paf-sidepanel-overlay--enterFrom`]}
+            enterTo={SlidePanelStyles[`paf-sidepanel-overlay--enterTo`]}
+            leave={SlidePanelStyles[`paf-sidepanel-overlay--leave`]}
+            leaveFrom={SlidePanelStyles[`paf-sidepanel-overlay--leaveFrom`]}
+            leaveTo={SlidePanelStyles[`paf-sidepanel-overlay--leaveTo`]}
           >
             <div
-              className={SlidePanelStyles['sbui-sidepanel-overlay-container']}
+              className={SlidePanelStyles['paf-sidepanel-overlay-container']}
             >
-              <div className={SlidePanelStyles['sbui-sidepanel-overlay']}></div>
+              <div className={SlidePanelStyles['paf-sidepanel-overlay']}></div>
             </div>
           </Transition.Child>
         </Dialog.Overlay>
@@ -139,26 +139,26 @@ const SidePanel = ({
         <Dialog.Content forceMount style={{ width: '100vw' }}>
           <div className={containerClasses.join(' ')}>
             <Transition.Child
-              enter={SlidePanelStyles[`sbui-sidepanel--enter`]}
+              enter={SlidePanelStyles[`paf-sidepanel--enter`]}
               enterFrom={
                 left
-                  ? SlidePanelStyles[`sbui-sidepanel--enterFrom--left`]
-                  : SlidePanelStyles[`sbui-sidepanel--enterFrom`]
+                  ? SlidePanelStyles[`paf-sidepanel--enterFrom--left`]
+                  : SlidePanelStyles[`paf-sidepanel--enterFrom`]
               }
-              enterTo={SlidePanelStyles[`sbui-sidepanel--enterTo`]}
-              leave={SlidePanelStyles[`sbui-sidepanel--leave`]}
-              leaveFrom={SlidePanelStyles[`sbui-sidepanel--leaveFrom`]}
+              enterTo={SlidePanelStyles[`paf-sidepanel--enterTo`]}
+              leave={SlidePanelStyles[`paf-sidepanel--leave`]}
+              leaveFrom={SlidePanelStyles[`paf-sidepanel--leaveFrom`]}
               leaveTo={
                 left
-                  ? SlidePanelStyles[`sbui-sidepanel--leaveTo--left`]
-                  : SlidePanelStyles[`sbui-sidepanel--leaveTo`]
+                  ? SlidePanelStyles[`paf-sidepanel--leaveTo--left`]
+                  : SlidePanelStyles[`paf-sidepanel--leaveTo`]
               }
             >
               <div
                 className={
                   wide
-                    ? SlidePanelStyles['sbui-sidepanel--wide']
-                    : SlidePanelStyles['sbui-sidepanel--medium']
+                    ? SlidePanelStyles['paf-sidepanel--wide']
+                    : SlidePanelStyles['paf-sidepanel--medium']
                 }
               >
                 <div
@@ -175,7 +175,7 @@ const SidePanel = ({
                     }}
                   >
                     <header
-                      className={SlidePanelStyles['sbui-sidepanel-header']}
+                      className={SlidePanelStyles['paf-sidepanel-header']}
                     >
                       <Space
                         size={3}
@@ -192,7 +192,7 @@ const SidePanel = ({
                         )}
                         <div
                           className={
-                            SlidePanelStyles['sbui-sidepanel-close-container']
+                            SlidePanelStyles['paf-sidepanel-close-container']
                           }
                         >
                           <Button
@@ -213,7 +213,7 @@ const SidePanel = ({
                         )}
                       </div>
                     </header>
-                    <div className={SlidePanelStyles['sbui-sidepanel-content']}>
+                    <div className={SlidePanelStyles['paf-sidepanel-content']}>
                       {children}
                     </div>
                   </Space>

@@ -68,11 +68,11 @@ function Input({
     type = 'text'
   }
 
-  let inputClasses = [InputStyles['sbui-input']]
-  if (error) inputClasses.push(InputStyles['sbui-input--error'])
-  if (icon) inputClasses.push(InputStyles['sbui-input--with-icon'])
-  if (size) inputClasses.push(InputStyles[`sbui-input--${size}`])
-  if (borderless) inputClasses.push(InputStyles['sbui-input--borderless'])
+  let inputClasses = [InputStyles['paf-input']]
+  if (error) inputClasses.push(InputStyles['paf-input--error'])
+  if (icon) inputClasses.push(InputStyles['paf-input--with-icon'])
+  if (size) inputClasses.push(InputStyles[`paf-input--${size}`])
+  if (borderless) inputClasses.push(InputStyles['paf-input--borderless'])
 
   function onCopy(value: any) {
     navigator.clipboard.writeText(value).then(
@@ -110,7 +110,7 @@ function Input({
         style={style}
         size={size}
       >
-        <div className={InputStyles['sbui-input-container']}>
+        <div className={InputStyles['paf-input-container']}>
           <input
             autoComplete={autoComplete}
             autoFocus={autoFocus}
@@ -132,7 +132,7 @@ function Input({
           {icon && <InputIconContainer icon={icon} />}
           {copy || error || actions ? (
             <Space
-              className={InputStyles['sbui-input-actions-container']}
+              className={InputStyles['paf-input-actions-container']}
               size={1}
             >
               {error && <InputErrorIcon size={size} />}
@@ -217,11 +217,11 @@ function TextArea({
 }: TextAreaProps) {
   const [charLength, setCharLength] = useState(0)
 
-  let classes = [InputStyles['sbui-input']]
-  if (error) classes.push(InputStyles['sbui-input--error'])
-  if (icon) classes.push(InputStyles['sbui-input--with-icon'])
-  if (size) classes.push(InputStyles[`sbui-input--${size}`])
-  if (borderless) classes.push(InputStyles['sbui-input--borderless'])
+  let classes = [InputStyles['paf-input']]
+  if (error) classes.push(InputStyles['paf-input--error'])
+  if (icon) classes.push(InputStyles['paf-input--with-icon'])
+  if (size) classes.push(InputStyles[`paf-input--${size}`])
+  if (borderless) classes.push(InputStyles['paf-input--borderless'])
 
   function onInputChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setCharLength(e.target.value.length)

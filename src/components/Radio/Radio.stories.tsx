@@ -37,7 +37,7 @@ export const Default = (args: any) => (
   <Radio.Group {...args} onChange={action('onChange')}>
     {options.map((x, i) => (
       <Radio
-        name="sbui-radiogroup"
+        name="paf-radiogroup"
         key={i}
         label={x.label}
         description={x.description}
